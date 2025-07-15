@@ -40,11 +40,11 @@ def display_contact_search(name: str,contact_list: dict)->None:
     """returns ntohign becuase it only displays things on the terminal """
 
     if name_is_in_phonebook(name,contact_list) :
-            print(f"The number assigned to the username {name} is {contact_list[name]}")
+            print(f"The number assigned to the username {name} is  : {contact_list[name]}")
     else:
             print(f"Person Doesn't exist")
     
-    print(f"You have {len(contact_list)} People Added In Your Contacts .")
+    print(f"You have {len(contact_list)} contacts Added In Your phonebook .")
          
 
 
