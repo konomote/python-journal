@@ -49,8 +49,11 @@ def sort_contacts(contact_list:dict,sorted_by_number:bool,)->list:
         """first of all i asked does sorted() always return a list?
         the answer was yes ; 
         then i asked what does .items() return the key or value ;
-        so what happens after you use it with a dict ; it makes a tuple (imagine tuple as like
-        evolved knight from clash royale bro has armor on) of both the key and the value as a couple
+        so what happens after you use it with a dict ; it return a view object ;
+        the view object displays a list of the dictionarys key-value pairs as tuples . 
+        
+        it makes a tuple (imagine tuple as like , an evolved knight from clash royale
+        bro has armor on) of both the key and the value as a couple
          ---
           next i was like what is key=lambda ; so lambda makes a tiny no name function for one time
           use and the item is the variable that we pass into that function ; 
@@ -67,10 +70,21 @@ def sort_contacts(contact_list:dict,sorted_by_number:bool,)->list:
 
 
 
+
+
+
 def main():
-    user_input=input(f"Do you want the list to be sorted by numbers ? y/n : ").strip().lower()
+    while True:
+        #while true if kinda just means starting from somewhere knwoing ure gonna go on until ure told to stop
+        #its like saying "as youre alive uve to keep on living"
+
+        user_input=input(f"Do you want the list to be sorted by numbers ? y/n : ").strip().lower()
+        if user_input in ['y','n']:
+            break
+        else:
+            print("X Invalid Input. Please enter 'y' or 'n' . ")
     """if user enters y then code will sort the results by numbers"""
-    
+
     sorting_choice=user_input=="y"
 # 🧠 My thought process:
 # Wait, why is sort_by_number = user_input == "y" a Boolean?
@@ -80,7 +94,6 @@ def main():
 # So if I did something like user_input > 0, that would also return True or False?
 # Meaning I can assign any comparison to a variable, and that variable becomes a boolean.
 # That's clean as hell — now I get it.
-
 
     print (sorting_choice) #chekcing if user input (boolean) is correct or not
     ContactList=get_contacts()
