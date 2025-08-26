@@ -90,6 +90,8 @@ def remove_task_in_todo_list(tasks_list:list)->list:
     print(format_todo_list(tasks_list))
     save_tasks(tasks_list)
 
+#i shouldve added a if statement that if the user input number is between the len of list only
+#then it would remove the task ; else there is an error ; but anyways 
 
 "=============================================================================="
 
