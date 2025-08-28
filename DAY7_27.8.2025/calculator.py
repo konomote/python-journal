@@ -125,10 +125,7 @@ def main ():
 
             except ValueError:
                 print("Enter a valid number to continue , try again.")
-                #while upgrading this function to print in the main statement ; i thought to myself that 
-#this for loop on top is what i got and practiced with chatgpt ;
-#what bothers me is idk if this line is getting assigned with the return value the multiplication function is returning
-#if so does it only print after all ten lines get printed or it prints every line for every loop ?
+
             except ValueError:
                 print ("Enter a valid number to continue , try again.")
                 print()
@@ -145,7 +142,7 @@ def main ():
 
 "=============================================================================="
 
-
+#this_code_is_90% same like my yesterdays code ; idek why i did this but yeah ; 
 
 
 
