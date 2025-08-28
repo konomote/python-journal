@@ -22,7 +22,7 @@ def printing_numbers_from_x_to_y(start_printing_from , end_printing_at):
     print()
     for number in range (start_printing_from , end_printing_at):
         print (number)
-    print ("_________________________________________________________________________")
+    print ("__________________________")
     print()
 
 
@@ -40,16 +40,14 @@ def summing_numbers_from_x_to_y(start_adding_from , end_adding_at)->int:
 
 
 def multiplication_table(number, multiplication_limit):
-    for idx in range(1, multiplication_limit+1):
-        print(f"{number} x {idx} = {number*idx}")
-    print ("_________________________________________________________________________")
+    return [f"{number} x {idx} = {number*idx}" for idx in range(1, multiplication_limit+1)]
 
 
 "=============================================================================="
 
 
 def main ():
-    print ("_________________________________________________________________________")
+    print ("__________________________")
 
     program_names_in_a_list=program_names()
     
@@ -60,7 +58,7 @@ def main ():
         formatted_program_names= "\n".join(f"{idx}) {program_names_in_a_list}" for idx,program_names_in_a_list in enumerate(program_names_in_a_list,start=1))
         print(formatted_program_names)
         user_program_choice = input("\nEnter the ID of program you want to use : ").lower().strip()
-        print ("_________________________________________________________________________")
+        print ("__________________________")
 
 
         if user_program_choice=="1":
@@ -81,7 +79,7 @@ def main ():
                 end =   int (input("  ending number : "))
                 total = summing_numbers_from_x_to_y( start,end )
                 print(f"{start}+{start+1}...{end} = {total}")
-                print ("_________________________________________________________________________")
+                print ("__________________________")
 
             except ValueError:
                 print ("Enter a valid number to continue , try again.")
@@ -93,8 +91,13 @@ def main ():
 
                 multiplication_limit=10
                 user_input_for_multiplication_table = int (input("  Of which number : "))
-                multiplication_table( user_input_for_multiplication_table,multiplication_limit )
-
+                for line in multiplication_table( user_input_for_multiplication_table,multiplication_limit):
+                    print (line)
+                print ("__________________________")
+                #while upgrading this function to print in the main statement ; i thought to myself that 
+#this for loop on top is what i got and practiced with chatgpt ;
+#what bothers me is idk if this line is getting assigned with the return value the multiplication function is returning
+#if so does it only print after all ten lines get printed or it prints every line for every loop ?
             except ValueError:
                 print ("Enter a valid number to continue , try again.")
                 print()
