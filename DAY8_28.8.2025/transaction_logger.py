@@ -45,6 +45,7 @@ def main():
     print()
     print(program_names_display)
     print ()
+    transactions = []
     while True : 
 
 
@@ -57,6 +58,7 @@ def main():
                 print (f"Your Current Balance Is : {current_balance}")
                 print ("__________________________")
                 print()
+
             except ValueError :
                 print ("Enter a valid Input")
 
@@ -70,6 +72,8 @@ def main():
 
                 print()
                 print (f"Your Current Balance Is : {total_after_deposit}")
+                current_balance = total_after_deposit
+                transactions.append(f"Deposited {deposit_amount} → Balance: {current_balance}")
 
                 print ("__________________________")
                 print()
@@ -85,6 +89,8 @@ def main():
 
                 print()
                 print (f"Your Current Balance Is : {total_after_withdraw}")
+                current_balance = total_after_withdraw
+                transactions.append(f"Deposited {withdraw_amount} → Balance: {current_balance}")
 
                 print ("__________________________")
                 print()
