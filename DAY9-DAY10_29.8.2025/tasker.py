@@ -17,3 +17,18 @@ Learning Goals:
 
 "========================================================================="
 
+
+"""so at first we will import the needed libraries : chore ; 
+we have to set up the paths and imports that the json file needs . 
+ and we are importing datetime for the timestamps ; """
+
+
+from __future__ import annotations
+import json
+from pathlib import Path
+from datetime import datetime
+from typing import Optional, List, Dict
+
+#tasks.json file will be stored next to this very .py file (next to this file)
+STORAGE_FILE = Path(__file__).with_name("tasks.json")
+
